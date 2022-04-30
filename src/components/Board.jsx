@@ -18,19 +18,19 @@ const BOARD = [...HALF, [...STAR], ...[...HALF].reverse()];
 
 
 const StyledBoard = styled.div`
-    width: 75%;
+    width: 40%;
     height: 75%;
     background: yellow;
     display: grid;
     grid-template-rows: repeat(15, 1fr);
     grid-template-columns: repeat(15, 1fr);
-    border: 1px solid red;
+    border: 1px solid black;
 `;
 
 export const Board = () => {
     return (
         <StyledBoard>
-            {BOARD.map(row => row.map(el => <Tile/>))}
+            {BOARD.map(row => row.map(el => <Tile el={el}/>))}
         </StyledBoard>
     )
 }

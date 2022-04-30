@@ -6,9 +6,16 @@ const StyledTile = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    background: #E0E0B0;
+    border: 1px solid white;
 `;
 
-export const Tile = () => {
-    return <StyledTile/>
+export const Tile = ({el}) => {
+    return (
+        <StyledTile>
+            <span>
+                {el}
+            </span>
+        </StyledTile>
+    )
 }
