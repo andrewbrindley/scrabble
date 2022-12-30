@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {PlayerTokens} from './PlayerTokens'
 import {Board} from './Board';
 import styled from 'styled-components';
+import { generateTokens } from '../game';
 import '../App.css';
 
 const StyledScreen = styled.div`
@@ -13,15 +14,20 @@ const StyledScreen = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
 `
 
 
 const App = () => {
+
+    const [allTokens, setAllTokens] = useState(generateTokens());
+    const [tokens, setTokens] = useState(allTokens.slice(0, 7));
+
+
+
     return (
         <StyledScreen>
             <Board/>
-            <PlayerTokens tokens = {['A', 'B', 'C', 'D', 'E', 'F', 'G']}/>
+            <PlayerTokens tokens = {tokens}/>
         </StyledScreen>
     )
 }

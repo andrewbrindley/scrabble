@@ -12,6 +12,9 @@ const StyledToken = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    &: hover{
+        cursor: pointer;
+    }
 `;
 
 const StyledTop = styled.div`

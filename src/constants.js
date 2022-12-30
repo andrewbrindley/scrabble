@@ -17,3 +17,5 @@ export const COUNTS = {
     'J': 1, 'X': 1,
     'Q': 1, 'Z': 1  
 }
+
+export const ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
